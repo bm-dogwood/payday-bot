@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 export const SITE_CONFIG = {
   name: "PAYDAY.BOT",
   url: "https://payday.bot",
@@ -74,7 +76,8 @@ export const SEO_PAGES: Record<string, PageSEO> = {
   },
 
   alternatives: {
-    title: "Best Payday Loan Alternatives 2025 – Low-Cost Emergency Loans | PAYDAY.BOT",
+    title:
+      "Best Payday Loan Alternatives 2025 – Low-Cost Emergency Loans | PAYDAY.BOT",
     description:
       "Find safer, cheaper alternatives to payday loans: credit union PALs, cash advance apps, personal loans, and more. Compare rates and get out of the debt trap.",
     canonical: "https://payday.bot/alternatives",
@@ -134,7 +137,8 @@ export const SEO_PAGES: Record<string, PageSEO> = {
   },
 
   seo_alternatives: {
-    title: "10 Best Payday Loan Alternatives That Won't Trap You in Debt | PAYDAY.BOT",
+    title:
+      "10 Best Payday Loan Alternatives That Won't Trap You in Debt | PAYDAY.BOT",
     description:
       "Discover 10 proven payday loan alternatives including PAL loans, BNPL, gig economy tips, and fintech lenders. Compare real APRs and eligibility requirements.",
     canonical: "https://payday.bot/seo/payday-loan-alternatives",
@@ -151,7 +155,8 @@ export const SEO_PAGES: Record<string, PageSEO> = {
   },
 
   seo_laws_by_state: {
-    title: "Payday Loan Laws & Regulations by State – 2025 Complete Guide | PAYDAY.BOT",
+    title:
+      "Payday Loan Laws & Regulations by State – 2025 Complete Guide | PAYDAY.BOT",
     description:
       "Every state's payday lending law explained: APR caps, maximum loan amounts, rollover limits, cooling-off periods. See which states ban payday loans entirely.",
     canonical: "https://payday.bot/seo/payday-loan-laws-by-state",
@@ -168,7 +173,8 @@ export const SEO_PAGES: Record<string, PageSEO> = {
   },
 
   seo_debt_calculator: {
-    title: "Payday Loan Debt Trap Calculator – Know Before You Borrow | PAYDAY.BOT",
+    title:
+      "Payday Loan Debt Trap Calculator – Know Before You Borrow | PAYDAY.BOT",
     description:
       "See exactly how much a payday loan will cost over time. Our debt trap calculator shows rollover costs, total fees, and escape strategies for payday debt cycles.",
     canonical: "https://payday.bot/seo/payday-loan-debt-calculator",
@@ -185,7 +191,8 @@ export const SEO_PAGES: Record<string, PageSEO> = {
   },
 
   seo_apr_calculator: {
-    title: "Payday Loan APR Calculator – Convert Fees to Annual Rate | PAYDAY.BOT",
+    title:
+      "Payday Loan APR Calculator – Convert Fees to Annual Rate | PAYDAY.BOT",
     description:
       "Convert payday loan fees to APR instantly. Understand what $15 per $100 really costs annually. Compare payday APR vs credit cards, personal loans, and alternatives.",
     canonical: "https://payday.bot/seo/payday-loan-apr-calculator",
@@ -202,7 +209,8 @@ export const SEO_PAGES: Record<string, PageSEO> = {
   },
 
   seo_requirements: {
-    title: "Online Payday Loan Requirements – What You Need to Qualify | PAYDAY.BOT",
+    title:
+      "Online Payday Loan Requirements – What You Need to Qualify | PAYDAY.BOT",
     description:
       "Everything required to get an online payday loan: income minimums, bank account requirements, credit score rules, and state eligibility. Avoid wasted applications.",
     canonical: "https://payday.bot/seo/online-payday-loan-requirements",
@@ -236,7 +244,8 @@ export const SEO_PAGES: Record<string, PageSEO> = {
   },
 
   seo_emergency_loans: {
-    title: "Emergency Loan Options for Bad Credit – Fast Funding Guide 2025 | PAYDAY.BOT",
+    title:
+      "Emergency Loan Options for Bad Credit – Fast Funding Guide 2025 | PAYDAY.BOT",
     description:
       "Compare emergency loan options when you have bad credit: online lenders, credit unions, cash apps, and government assistance programs. Get funds fast without a payday trap.",
     canonical: "https://payday.bot/seo/emergency-loan-options",
@@ -253,7 +262,7 @@ export const SEO_PAGES: Record<string, PageSEO> = {
   },
 };
 
-export function buildMetadata(pageSEO: PageSEO) {
+export function buildMetadata(pageSEO: PageSEO): Metadata {
   return {
     title: pageSEO.title,
     description: pageSEO.description,
@@ -261,6 +270,7 @@ export function buildMetadata(pageSEO: PageSEO) {
     alternates: {
       canonical: pageSEO.canonical,
     },
+
     openGraph: {
       title: pageSEO.title,
       description: pageSEO.description,
@@ -276,6 +286,7 @@ export function buildMetadata(pageSEO: PageSEO) {
         },
       ],
     },
+
     twitter: {
       card: "summary_large_image",
       title: pageSEO.title,
@@ -283,8 +294,27 @@ export function buildMetadata(pageSEO: PageSEO) {
       site: SITE_CONFIG.twitterHandle,
       images: [pageSEO.ogImage || "https://payday.bot/og-default.png"],
     },
+
     robots: pageSEO.noindex
-      ? { index: false, follow: false }
-      : { index: true, follow: true, "max-snippet": -1, "max-image-preview": "large" },
+      ? {
+          index: false,
+          follow: false,
+          googleBot: {
+            index: false,
+            follow: false,
+            "max-snippet": -1,
+            "max-image-preview": "none",
+          },
+        }
+      : {
+          index: true,
+          follow: true,
+          googleBot: {
+            index: true,
+            follow: true,
+            "max-snippet": -1,
+            "max-image-preview": "large",
+          },
+        },
   };
 }

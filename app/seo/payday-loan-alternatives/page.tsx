@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
-import { buildMetadata, SEO_PAGES } from "@/app/lib/seo-config";
-import { JsonLd, articleSchema, faqSchema, breadcrumbSchema } from "@/app/lib/schema";
+import { buildMetadata, SEO_PAGES } from "@/lib/seo-config";
+import {
+  JsonLd,
+  articleSchema,
+  faqSchema,
+  breadcrumbSchema,
+} from "@/lib/schema";
 
 export const metadata: Metadata = buildMetadata(SEO_PAGES.seo_alternatives);
 
@@ -159,7 +164,10 @@ export default function PaydayLoanAlternativesPage() {
     breadcrumbSchema([
       { name: "Home", url: "https://payday.bot" },
       { name: "Alternatives", url: "https://payday.bot/alternatives" },
-      { name: "10 Best Payday Loan Alternatives", url: "https://payday.bot/seo/payday-loan-alternatives" },
+      {
+        name: "10 Best Payday Loan Alternatives",
+        url: "https://payday.bot/seo/payday-loan-alternatives",
+      },
     ]),
   ];
 
@@ -169,39 +177,54 @@ export default function PaydayLoanAlternativesPage() {
       <main className="max-w-4xl mx-auto px-4 py-12">
         <nav aria-label="Breadcrumb" className="text-sm text-gray-500 mb-6">
           <ol className="flex gap-2">
-            <li><a href="/">Home</a></li>
+            <li>
+              <a href="/">Home</a>
+            </li>
             <li>/</li>
-            <li><a href="/alternatives">Alternatives</a></li>
+            <li>
+              <a href="/alternatives">Alternatives</a>
+            </li>
             <li>/</li>
             <li aria-current="page">10 Best Alternatives</li>
           </ol>
         </nav>
 
         <h1 className="text-3xl font-bold mb-4">
-          10 Best Payday Loan Alternatives That Won&apos;t Trap You in Debt (2025)
+          10 Best Payday Loan Alternatives That Won&apos;t Trap You in Debt
+          (2025)
         </h1>
         <p className="text-gray-400 text-sm mb-6">
-          Last updated: {new Date().toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}
+          Last updated:{" "}
+          {new Date().toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })}
         </p>
 
         <section className="prose max-w-none mb-10">
           <p>
-            The average payday loan carries a 391% APR. That means a $300 two-week loan costs $45 in fees—and if you
-            can&apos;t repay it, each rollover adds another $45. The good news: there are 10 legitimate alternatives that
-            provide emergency cash at a fraction of the cost. This guide ranks them by total cost, speed, and
-            accessibility.
+            The average payday loan carries a 391% APR. That means a $300
+            two-week loan costs $45 in fees—and if you can&apos;t repay it, each
+            rollover adds another $45. The good news: there are 10 legitimate
+            alternatives that provide emergency cash at a fraction of the cost.
+            This guide ranks them by total cost, speed, and accessibility.
           </p>
           <p>
-            <strong>Bottom line:</strong> Before taking a payday loan, check whether you qualify for a credit union PAL,
-            a cash advance app, or an online personal loan. Even a high-rate personal loan at 36% APR costs 90% less
-            than the typical payday loan.
+            <strong>Bottom line:</strong> Before taking a payday loan, check
+            whether you qualify for a credit union PAL, a cash advance app, or
+            an online personal loan. Even a high-rate personal loan at 36% APR
+            costs 90% less than the typical payday loan.
           </p>
         </section>
 
         {/* Alternatives list */}
         <section className="mb-12 space-y-8">
           {ALTERNATIVES.map((alt) => (
-            <article key={alt.rank} className="border border-white/10 rounded-xl p-6">
+            <article
+              key={alt.rank}
+              className="border border-white/10 rounded-xl p-6"
+            >
               <div className="flex items-start gap-4 mb-4">
                 <span className="flex-shrink-0 w-10 h-10 rounded-full bg-blue-600/20 border border-blue-500/30 flex items-center justify-center font-bold text-blue-400">
                   {alt.rank}
@@ -242,27 +265,39 @@ export default function PaydayLoanAlternativesPage() {
 
         {/* Comparison context */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-3">Why Payday Loan Alternatives Are So Much Cheaper</h2>
+          <h2 className="text-2xl font-semibold mb-3">
+            Why Payday Loan Alternatives Are So Much Cheaper
+          </h2>
           <p className="text-gray-300 leading-relaxed mb-4">
-            A payday loan charges $15 per $100 borrowed for a 14-day term. Expressed as an APR, that&apos;s 391%. A credit
-            union PAL at 28% APR on the same $300 for 14 days costs just $3.23 in interest—a savings of $41.77 on a
-            single loan.
+            A payday loan charges $15 per $100 borrowed for a 14-day term.
+            Expressed as an APR, that&apos;s 391%. A credit union PAL at 28% APR
+            on the same $300 for 14 days costs just $3.23 in interest—a savings
+            of $41.77 on a single loan.
           </p>
           <p className="text-gray-300 leading-relaxed">
-            The difference compounds dramatically when borrowers roll over loans. A payday borrower who rolls over a
-            $300 loan 6 times pays $270 in fees alone—90% of the original principal—before ever touching the
-            principal balance. A PAL borrower with the same $300 over 6 months pays roughly $25 in total interest.
+            The difference compounds dramatically when borrowers roll over
+            loans. A payday borrower who rolls over a $300 loan 6 times pays
+            $270 in fees alone—90% of the original principal—before ever
+            touching the principal balance. A PAL borrower with the same $300
+            over 6 months pays roughly $25 in total interest.
           </p>
         </section>
 
         {/* FAQ */}
         <section className="mb-10">
-          <h2 className="text-2xl font-semibold mb-6">Frequently Asked Questions</h2>
+          <h2 className="text-2xl font-semibold mb-6">
+            Frequently Asked Questions
+          </h2>
           <div className="space-y-6">
             {FAQS.map((faq) => (
-              <div key={faq.question} className="border-l-2 border-blue-500/30 pl-4">
+              <div
+                key={faq.question}
+                className="border-l-2 border-blue-500/30 pl-4"
+              >
                 <h3 className="font-semibold mb-2">{faq.question}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{faq.answer}</p>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  {faq.answer}
+                </p>
               </div>
             ))}
           </div>
@@ -271,10 +306,42 @@ export default function PaydayLoanAlternativesPage() {
         <section className="p-6 bg-white/5 rounded-xl">
           <h2 className="text-lg font-semibold mb-4">Related Resources</h2>
           <ul className="space-y-2 text-sm">
-            <li>→ <a href="/seo/payday-loan-rates-by-state" className="text-blue-400 hover:underline">Payday loan rates by state</a></li>
-            <li>→ <a href="/seo/payday-loan-laws-by-state" className="text-blue-400 hover:underline">Payday loan laws by state</a></li>
-            <li>→ <a href="/seo/emergency-loan-options" className="text-blue-400 hover:underline">Emergency loan options for bad credit</a></li>
-            <li>→ <a href="/debt-calculator" className="text-blue-400 hover:underline">Payday loan debt calculator</a></li>
+            <li>
+              →{" "}
+              <a
+                href="/seo/payday-loan-rates-by-state"
+                className="text-blue-400 hover:underline"
+              >
+                Payday loan rates by state
+              </a>
+            </li>
+            <li>
+              →{" "}
+              <a
+                href="/seo/payday-loan-laws-by-state"
+                className="text-blue-400 hover:underline"
+              >
+                Payday loan laws by state
+              </a>
+            </li>
+            <li>
+              →{" "}
+              <a
+                href="/seo/emergency-loan-options"
+                className="text-blue-400 hover:underline"
+              >
+                Emergency loan options for bad credit
+              </a>
+            </li>
+            <li>
+              →{" "}
+              <a
+                href="/debt-calculator"
+                className="text-blue-400 hover:underline"
+              >
+                Payday loan debt calculator
+              </a>
+            </li>
           </ul>
         </section>
       </main>
