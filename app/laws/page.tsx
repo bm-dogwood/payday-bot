@@ -90,7 +90,7 @@ export default function LawsPage() {
   return (
     <div className="mx-auto max-w-7xl px-5 py-16">
       {/* ── Header ── */}
-      <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-cash">
+      <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary">
         // 03 — Law Tracker
       </p>
       <h1 className="display mt-3 text-5xl sm:text-7xl">
@@ -103,7 +103,7 @@ export default function LawsPage() {
           href="https://openstates.org/"
           target="_blank"
           rel="noreferrer"
-          className="text-cash underline underline-offset-2"
+          className="text-primary underline underline-offset-2"
         >
           OpenStates API
         </a>
@@ -116,7 +116,7 @@ export default function LawsPage() {
           {
             k: "Banned / 36% effective",
             v: banned.length,
-            c: "text-cash",
+            c: "text-primary",
             desc: "Loans not viable as payday.",
           },
           {
@@ -169,7 +169,7 @@ export default function LawsPage() {
             </span>
           )}
           {billsSource === "live" && (
-            <span className="font-mono text-[11px] text-cash">
+            <span className="font-mono text-[11px] text-primary">
               ✓ Live from OpenStates
             </span>
           )}
@@ -187,11 +187,11 @@ export default function LawsPage() {
             bills.map((b) => (
               <div
                 key={b.id}
-                className="flex items-start justify-between gap-4 rounded-xl border border-border bg-card/40 px-5 py-4 transition hover:bg-cash/5"
+                className="flex items-start justify-between gap-4 rounded-xl border border-border bg-card/40 px-5 py-4 transition hover:bg-primary/5"
               >
                 <div className="min-w-0">
                   <div className="flex items-center gap-2">
-                    <span className="shrink-0 font-mono text-xs text-cash">
+                    <span className="shrink-0 font-mono text-xs text-primary">
                       {b.identifier}
                     </span>
                     <span className="truncate font-medium text-sm">
@@ -204,7 +204,7 @@ export default function LawsPage() {
                   </div>
                 </div>
                 <div className="flex shrink-0 items-center gap-2">
-                  <span className="rounded-full border border-cash/40 px-2 py-0.5 font-mono text-[10px] text-cash">
+                  <span className="rounded-full border border-primary/40 px-2 py-0.5 font-mono text-[10px] text-primary">
                     {b.classification[0] ?? "bill"}
                   </span>
                   {b.sources?.[0]?.url && (
@@ -212,7 +212,7 @@ export default function LawsPage() {
                       href={b.sources[0].url}
                       target="_blank"
                       rel="noreferrer"
-                      className="font-mono text-[10px] text-muted-foreground hover:text-cash transition"
+                      className="font-mono text-[10px] text-muted-foreground hover:text-primary transition"
                     >
                       ↗
                     </a>
@@ -228,8 +228,8 @@ export default function LawsPage() {
       <div className="mt-14 grid gap-5 lg:grid-cols-3">
         <Column
           title="Banned"
-          tint="text-cash"
-          border="border-cash/40"
+          tint="text-primary"
+          border="border-primary/40"
           list={banned}
         />
         <Column
@@ -250,14 +250,14 @@ export default function LawsPage() {
       <div className="mt-20">
         <h2 className="display text-3xl sm:text-4xl">Recent reform timeline</h2>
         <div className="relative mt-8 pl-6">
-          <div className="absolute bottom-0 left-2 top-0 w-px bg-cash/30" />
+          <div className="absolute bottom-0 left-2 top-0 w-px bg-primary/30" />
           {recent.map((r, i) => (
             <div
               key={i}
               className="relative mb-8 grid grid-cols-[80px_1fr] gap-6"
             >
-              <div className="absolute -left-[1px] top-2 h-3 w-3 rounded-full bg-cash ring-4 ring-background" />
-              <div className="pl-6 font-mono text-cash">{r.year}</div>
+              <div className="absolute -left-[1px] top-2 h-3 w-3 rounded-full bg-primary ring-4 ring-background" />
+              <div className="pl-6 font-mono text-primary">{r.year}</div>
               <div className="rounded-xl border border-border bg-card/60 p-4">
                 <div className="font-semibold">{r.state}</div>
                 <div className="mt-1 text-sm text-muted-foreground">

@@ -24,7 +24,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3">
         <Link href="/" className="flex items-center gap-3">
           <Logo />
-          <span className="hidden rounded-full border border-cash/40 px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-cash sm:inline">
+          <span className="hidden rounded-full border border-primary/40 px-2 py-0.5 font-mono text-[10px] uppercase tracking-widest text-primary sm:inline">
             Open Vault · v1.0
           </span>
         </Link>
@@ -43,7 +43,7 @@ export function SiteHeader() {
                 }`}
               >
                 {active && (
-                  <span className="absolute inset-0 -z-10 rounded-full bg-cash" />
+                  <span className="absolute inset-0 -z-10 rounded-full bg-primary" />
                 )}
                 {n.label}
               </Link>
@@ -54,7 +54,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-3">
           <Link
             href="/calculator"
-            className="hidden rounded-full bg-cash px-4 py-2 font-mono text-xs uppercase tracking-wider text-ink transition hover:bg-cash/90 sm:inline-flex"
+            className="hidden rounded-full bg-primary px-4 py-2 font-mono text-xs uppercase tracking-wider text-ink transition hover:bg-primary/90 sm:inline-flex"
           >
             Run the Numbers
           </Link>
@@ -95,7 +95,7 @@ export function SiteHeader() {
                 onClick={() => setOpen(false)}
                 className={`rounded-md px-3 py-2 text-sm ${
                   pathname === n.to
-                    ? "bg-cash text-ink"
+                    ? "bg-primary text-ink"
                     : "text-foreground hover:bg-muted"
                 }`}
               >

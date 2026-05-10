@@ -377,9 +377,9 @@ export default function OnlinePaydayLoanRequirementsPage() {
             Meeting payday loan requirements doesn&apos;t mean a payday loan is
             your best option. If you qualify for a payday loan, you likely also
             qualify for cheaper alternatives including credit union PALs (28%
-            max APR), cash advance apps (often 0% for small amounts), or online
-            personal loans (6%–36% APR). A payday loan&apos;s 391%+ APR can cost
-            10x more for the same borrowing need.
+            max APR), primary advance apps (often 0% for small amounts), or
+            online personal loans (6%–36% APR). A payday loan&apos;s 391%+ APR
+            can cost 10x more for the same borrowing need.
           </p>
           <a
             href="/seo/payday-loan-alternatives"

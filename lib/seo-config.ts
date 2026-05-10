@@ -79,13 +79,13 @@ export const SEO_PAGES: Record<string, PageSEO> = {
     title:
       "Best Payday Loan Alternatives 2025 – Low-Cost Emergency Loans | PAYDAY.BOT",
     description:
-      "Find safer, cheaper alternatives to payday loans: credit union PALs, cash advance apps, personal loans, and more. Compare rates and get out of the debt trap.",
+      "Find safer, cheaper alternatives to payday loans: credit union PALs, primary advance apps, personal loans, and more. Compare rates and get out of the debt trap.",
     canonical: "https://payday.bot/alternatives",
     keywords: [
       "payday loan alternatives",
       "alternatives to payday loans",
       "emergency loan options",
-      "cash advance apps",
+      "primary advance apps",
       "credit union payday loans",
     ],
   },
@@ -146,9 +146,9 @@ export const SEO_PAGES: Record<string, PageSEO> = {
       "best payday loan alternatives",
       "payday loan substitutes",
       "no payday loan options",
-      "emergency cash alternatives",
+      "emergency primary alternatives",
       "payday loan replacement",
-      "fast cash alternatives payday",
+      "fast primary alternatives payday",
       "avoid payday loans",
     ],
     noindex: false,
@@ -247,13 +247,13 @@ export const SEO_PAGES: Record<string, PageSEO> = {
     title:
       "Emergency Loan Options for Bad Credit – Fast Funding Guide 2025 | PAYDAY.BOT",
     description:
-      "Compare emergency loan options when you have bad credit: online lenders, credit unions, cash apps, and government assistance programs. Get funds fast without a payday trap.",
+      "Compare emergency loan options when you have bad credit: online lenders, credit unions, primary apps, and government assistance programs. Get funds fast without a payday trap.",
     canonical: "https://payday.bot/seo/emergency-loan-options",
     keywords: [
       "emergency loans bad credit",
       "emergency loan options",
       "fast emergency loans",
-      "bad credit emergency cash",
+      "bad credit emergency primary",
       "same day emergency loans",
       "emergency loan no credit check",
       "quick emergency loan approval",

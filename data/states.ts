@@ -575,14 +575,14 @@ export const ALTERNATIVES = [
     why: "Built to break debt cycles, not extend them.",
   },
   {
-    name: "0% APR Credit Card Cash Advance",
+    name: "0% APR Credit Card primary Advance",
     issuer: "Major Banks (intro offers)",
     apr: "0% intro, then 25%+",
     amount: "Per card limit",
     term: "12 – 21 mo intro",
     speed: "Same day",
     pros: ["Cheapest if paid before intro ends"],
-    cons: ["Hard credit pull", "Cash-advance fees often apply"],
+    cons: ["Hard credit pull", "primary-advance fees often apply"],
     why: "If you can pay it back inside the promo window, this beats payday by 600%+ APR.",
   },
   {

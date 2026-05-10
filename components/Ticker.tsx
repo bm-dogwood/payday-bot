@@ -10,7 +10,7 @@ export function Ticker() {
           className="flex items-center gap-2 font-mono text-xs"
         >
           <span className="text-muted-foreground">{s.code}</span>
-          <span className={s.apr > 200 ? "text-destructive" : "text-cash"}>
+          <span className={s.apr > 200 ? "text-destructive" : "text-primary"}>
             {s.apr}% APR
           </span>
           <span className="text-muted-foreground/60">·</span>

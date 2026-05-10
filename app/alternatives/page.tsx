@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function AlternativesPage() {
   return (
     <div className="mx-auto max-w-7xl px-5 py-16">
-      <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-cash">
+      <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary">
         // 04 — Escape Hatch
       </p>
       <h1 className="display mt-3 text-5xl sm:text-7xl">
@@ -30,18 +30,18 @@ export default function AlternativesPage() {
           >
             <div className="flex items-start justify-between">
               <div>
-                <span className="font-mono text-[11px] uppercase tracking-widest text-cash">
+                <span className="font-mono text-[11px] uppercase tracking-widest text-primary">
                   Option {String(i + 1).padStart(2, "0")}
                 </span>
                 <h2 className="display mt-2 text-3xl">{a.name}</h2>
                 <p className="mt-1 text-sm text-muted-foreground">{a.issuer}</p>
               </div>
-              <span className="rounded-full border border-cash/40 bg-cash/10 px-3 py-1 font-mono text-xs text-cash">
+              <span className="rounded-full border border-primary/40 bg-primary/10 px-3 py-1 font-mono text-xs text-primary">
                 {a.apr}
               </span>
             </div>
 
-            <p className="mt-5 border-l-2 border-cash/60 pl-3 text-sm italic text-foreground/90">
+            <p className="mt-5 border-l-2 border-primary/60 pl-3 text-sm italic text-foreground/90">
               {a.why}
             </p>
 
@@ -52,34 +52,34 @@ export default function AlternativesPage() {
             </div>
 
             <div className="mt-5 grid gap-4 sm:grid-cols-2">
-              <List title="Pros" tint="text-cash" items={a.pros} />
+              <List title="Pros" tint="text-primary" items={a.pros} />
               <List title="Watch out" tint="text-warning" items={a.cons} />
             </div>
           </article>
         ))}
       </div>
 
-      <aside className="mt-14 rounded-2xl border border-cash/40 bg-cash/5 p-8">
-        <h3 className="display text-2xl text-cash">
+      <aside className="mt-14 rounded-2xl border border-primary/40 bg-primary/5 p-8">
+        <h3 className="display text-2xl text-primary">
           Before you click "I agree"
         </h3>
         <ol className="mt-4 grid gap-3 text-sm text-foreground/90 sm:grid-cols-2">
           <li>
-            <span className="font-mono text-cash">01.</span> Dial 2-1-1. Free
+            <span className="font-mono text-primary">01.</span> Dial 2-1-1. Free
             local hardship referrals.
           </li>
           <li>
-            <span className="font-mono text-cash">02.</span> Ask your employer
-            about a paycheck advance — most never get asked.
+            <span className="font-mono text-primary">02.</span> Ask your
+            employer about a paycheck advance — most never get asked.
           </li>
           <li>
-            <span className="font-mono text-cash">03.</span> Check your credit
-            union — PAL loans cap at 28% APR.
+            <span className="font-mono text-primary">03.</span> Check your
+            credit union — PAL loans cap at 28% APR.
           </li>
           <li>
-            <span className="font-mono text-cash">04.</span> Negotiate the bill
-            that's pushing you to borrow. Hospitals, utilities, landlords all
-            bend.
+            <span className="font-mono text-primary">04.</span> Negotiate the
+            bill that's pushing you to borrow. Hospitals, utilities, landlords
+            all bend.
           </li>
         </ol>
       </aside>
@@ -119,7 +119,7 @@ function List({
           <li key={i} className="flex gap-2">
             <span
               className={`mt-1 h-1.5 w-1.5 shrink-0 rounded-full ${
-                tint === "text-cash" ? "bg-cash" : "bg-warning"
+                tint === "text-primary" ? "bg-primary" : "bg-warning"
               }`}
             />
             {i}

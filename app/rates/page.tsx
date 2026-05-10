@@ -11,7 +11,7 @@ function statusBadge(s: StateRule["status"]) {
   const map = {
     legal: "bg-destructive/15 text-destructive border-destructive/40",
     capped: "bg-warning/15 text-warning border-warning/40",
-    banned: "bg-cash/15 text-cash border-cash/40",
+    banned: "bg-primary/15 text-primary border-primary/40",
   } as const;
   const label = { legal: "Legal", capped: "Capped", banned: "Banned" }[s];
   return (
@@ -74,7 +74,7 @@ export default function RatesPage() {
     <div className="mx-auto max-w-7xl px-5 py-16">
       {/* ── Header ── */}
       <div className="flex flex-col gap-3">
-        <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-cash">
+        <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary">
           // 02 — Rate Atlas
         </p>
         <h1 className="display text-5xl sm:text-7xl">
@@ -87,7 +87,7 @@ export default function RatesPage() {
             href="https://api.consumerfinance.gov/"
             target="_blank"
             rel="noreferrer"
-            className="text-cash underline underline-offset-2"
+            className="text-primary underline underline-offset-2"
           >
             CFPB Public API
           </a>
@@ -95,7 +95,7 @@ export default function RatesPage() {
           {!complaintsLoading && (
             <span className="font-mono text-xs">
               {complaintsSource === "live" ? (
-                <span className="text-cash">
+                <span className="text-primary">
                   ✓ Live · {totalComplaints.toLocaleString()} complaints loaded
                 </span>
               ) : (
@@ -114,7 +114,7 @@ export default function RatesPage() {
           onClick={() => setShowMap((v) => !v)}
           className={`rounded-xl border px-5 py-2.5 font-mono text-[11px] uppercase tracking-wider transition ${
             showMap
-              ? "border-cash bg-cash text-ink"
+              ? "border-primary bg-primary text-ink"
               : "border-border bg-card/60 text-muted-foreground hover:text-foreground"
           }`}
         >
@@ -143,7 +143,7 @@ export default function RatesPage() {
           value={q}
           onChange={(e) => setQ(e.target.value)}
           placeholder="Search state or code (e.g. TX)"
-          className="w-full flex-1 rounded-xl border border-border bg-input px-4 py-2.5 text-sm placeholder:text-muted-foreground focus:border-cash focus:outline-none"
+          className="w-full flex-1 rounded-xl border border-border bg-input px-4 py-2.5 text-sm placeholder:text-muted-foreground focus:border-primary focus:outline-none"
         />
         <div className="flex gap-1 rounded-xl border border-border bg-input p-1">
           {(["all", "banned", "capped", "legal"] as const).map((f) => (
@@ -152,7 +152,7 @@ export default function RatesPage() {
               onClick={() => setFilter(f)}
               className={`rounded-lg px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider transition ${
                 filter === f
-                  ? "bg-cash text-ink"
+                  ? "bg-primary text-ink"
                   : "text-muted-foreground hover:text-foreground"
               }`}
             >
@@ -168,27 +168,27 @@ export default function RatesPage() {
         <div className="grid grid-cols-12 gap-2 border-b border-border bg-ink/40 px-5 py-3 font-mono text-[10px] uppercase tracking-widest text-muted-foreground">
           <button
             onClick={() => setSortKey("name")}
-            className="col-span-3 text-left hover:text-cash transition"
+            className="col-span-3 text-left hover:text-primary transition"
           >
             State{arrow("name")}
           </button>
           <div className="col-span-1">Status</div>
           <button
             onClick={() => setSortKey("apr")}
-            className="col-span-3 text-left hover:text-cash transition"
+            className="col-span-3 text-left hover:text-primary transition"
           >
             APR{arrow("apr")}
           </button>
           <button
             onClick={() => setSortKey("maxLoan")}
-            className="col-span-2 text-left hover:text-cash transition"
+            className="col-span-2 text-left hover:text-primary transition"
           >
             Max loan{arrow("maxLoan")}
           </button>
           <div className="col-span-1">Term</div>
           <button
             onClick={() => setSortKey("complaints")}
-            className="col-span-2 text-left hover:text-cash transition"
+            className="col-span-2 text-left hover:text-primary transition"
           >
             CFPB{arrow("complaints")}
           </button>
@@ -199,11 +199,11 @@ export default function RatesPage() {
           {rows.map((s) => (
             <li
               key={s.code}
-              className="group grid grid-cols-12 items-center gap-2 border-b border-border/50 px-5 py-4 transition hover:bg-cash/5"
+              className="group grid grid-cols-12 items-center gap-2 border-b border-border/50 px-5 py-4 transition hover:bg-primary/5"
             >
               {/* State */}
               <div className="col-span-3 flex items-center gap-3">
-                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-border bg-ink/60 font-mono text-xs text-cash">
+                <span className="grid h-9 w-9 shrink-0 place-items-center rounded-lg border border-border bg-ink/60 font-mono text-xs text-primary">
                   {s.code}
                 </span>
                 <div className="min-w-0">
@@ -223,14 +223,14 @@ export default function RatesPage() {
                   <div className="h-1.5 w-full overflow-hidden rounded-full bg-ink/80">
                     <div
                       className={`h-full transition-all ${
-                        s.apr > 200 ? "bg-destructive" : "bg-cash"
+                        s.apr > 200 ? "bg-destructive" : "bg-primary"
                       }`}
                       style={{ width: `${(s.apr / maxApr) * 100}%` }}
                     />
                   </div>
                   <span
                     className={`shrink-0 font-mono text-sm ${
-                      s.apr > 200 ? "text-destructive" : "text-cash"
+                      s.apr > 200 ? "text-destructive" : "text-primary"
                     }`}
                   >
                     {s.apr}%

@@ -23,7 +23,7 @@ const ALTERNATIVES = [
   },
   {
     rank: 2,
-    name: "Cash Advance Apps (Earned Wage Access)",
+    name: "primary Advance Apps (Earned Wage Access)",
     apr: "0%–250%+ (tip-dependent)",
     amount: "$20–$750",
     speed: "Instant–3 days",
@@ -45,13 +45,13 @@ const ALTERNATIVES = [
   },
   {
     rank: 4,
-    name: "Credit Card Cash Advances",
+    name: "Credit Card primary Advances",
     apr: "20%–30% + fee",
     amount: "Up to credit limit",
     speed: "Immediate",
     creditRequired: "Existing credit card",
     pros: "Immediate access, no application, still far cheaper than payday",
-    cons: "High APR vs purchases; cash advance fees apply immediately",
+    cons: "High APR vs purchases; primary advance fees apply immediately",
     bestFor: "Existing cardholders in a true emergency",
   },
   {
@@ -73,8 +73,8 @@ const ALTERNATIVES = [
     speed: "Immediate at checkout",
     creditRequired: "Soft check only",
     pros: "0% interest on short plans, widely accepted, instant approval",
-    cons: "Only for purchases (not cash); late fees; can encourage overspending",
-    bestFor: "Covering specific purchases rather than cash needs",
+    cons: "Only for purchases (not primary); late fees; can encourage overspending",
+    bestFor: "Covering specific purchases rather than primary needs",
   },
   {
     rank: 7,
@@ -126,27 +126,27 @@ const FAQS = [
   {
     question: "What is the best alternative to a payday loan?",
     answer:
-      "The best alternative depends on your situation. Credit union Payday Alternative Loans (PALs) offer the strongest consumer protections with a federal 28% APR cap. For smaller amounts, cash advance apps like Earnin or Dave offer interest-free advances. For larger needs with fair credit, online personal lenders like LendingClub or Avant are far cheaper than payday loans.",
+      "The best alternative depends on your situation. Credit union Payday Alternative Loans (PALs) offer the strongest consumer protections with a federal 28% APR cap. For smaller amounts, primary advance apps like Earnin or Dave offer interest-free advances. For larger needs with fair credit, online personal lenders like LendingClub or Avant are far cheaper than payday loans.",
   },
   {
-    question: "Can I get emergency cash with bad credit and no payday loan?",
+    question: "Can I get emergency primary with bad credit and no payday loan?",
     answer:
-      "Yes. Options include credit union PALs (credit unions often consider members beyond just credit scores), cash advance apps with no credit check, employer payroll advances, nonprofit emergency funds, and secured personal loans using collateral.",
+      "Yes. Options include credit union PALs (credit unions often consider members beyond just credit scores), primary advance apps with no credit check, employer payroll advances, nonprofit emergency funds, and secured personal loans using collateral.",
   },
   {
-    question: "Are cash advance apps really free?",
+    question: "Are primary advance apps really free?",
     answer:
       "They can be, but it depends. Apps like Earnin use voluntary tips, which can translate to high effective APRs on small amounts. Apps like Chime SpotMe charge zero fees for advances. Always calculate the true cost by dividing the tip/fee by the advance amount and annualizing it.",
   },
   {
     question: "How quickly can I get a payday loan alternative?",
     answer:
-      "Cash advance apps can fund in minutes. Credit card cash advances are immediate. Online personal lenders can fund in 1–2 business days. Credit union PALs typically take 1–3 business days. Nonprofit emergency funds may take 3–7 days due to verification requirements.",
+      "primary advance apps can fund in minutes. Credit card primary advances are immediate. Online personal lenders can fund in 1–2 business days. Credit union PALs typically take 1–3 business days. Nonprofit emergency funds may take 3–7 days due to verification requirements.",
   },
   {
     question: "Will using a payday loan alternative hurt my credit score?",
     answer:
-      "Most cash advance apps and employer advances don't affect your credit score. Personal loans from online lenders do a hard credit pull that may temporarily lower your score by a few points. However, successfully repaying a personal loan builds credit history, which payday loans generally do not.",
+      "Most primary advance apps and employer advances don't affect your credit score. Personal loans from online lenders do a hard credit pull that may temporarily lower your score by a few points. However, successfully repaying a personal loan builds credit history, which payday loans generally do not.",
   },
 ];
 
@@ -207,14 +207,14 @@ export default function PaydayLoanAlternativesPage() {
             The average payday loan carries a 391% APR. That means a $300
             two-week loan costs $45 in fees—and if you can&apos;t repay it, each
             rollover adds another $45. The good news: there are 10 legitimate
-            alternatives that provide emergency cash at a fraction of the cost.
-            This guide ranks them by total cost, speed, and accessibility.
+            alternatives that provide emergency primary at a fraction of the
+            cost. This guide ranks them by total cost, speed, and accessibility.
           </p>
           <p>
             <strong>Bottom line:</strong> Before taking a payday loan, check
-            whether you qualify for a credit union PAL, a cash advance app, or
-            an online personal loan. Even a high-rate personal loan at 36% APR
-            costs 90% less than the typical payday loan.
+            whether you qualify for a credit union PAL, a primary advance app,
+            or an online personal loan. Even a high-rate personal loan at 36%
+            APR costs 90% less than the typical payday loan.
           </p>
         </section>
 

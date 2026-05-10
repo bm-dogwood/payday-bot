@@ -28,7 +28,7 @@ export default function CalculatorPage() {
 
   return (
     <div className="mx-auto max-w-7xl px-5 py-16">
-      <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-cash">
+      <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary">
         // 05 — Debt Lab
       </p>
       <h1 className="display mt-3 text-5xl sm:text-7xl">
@@ -82,20 +82,20 @@ export default function CalculatorPage() {
 
         {/* Output */}
         <div className="lg:col-span-3 grid gap-5">
-          <div className="glow-border relative overflow-hidden rounded-2xl bg-gradient-to-br from-card to-ink p-8">
-            <div className="font-mono text-[11px] uppercase tracking-widest text-cash">
+          <div className="glow-border relative overflow-hidden rounded-2xl bg-paper">
+            <div className="font-mono text-[11px] uppercase tracking-widest text-primary">
               True APR
             </div>
             <div className="display mt-2 text-7xl text-foreground sm:text-8xl">
               {apr.toFixed(0)}
-              <span className="text-cash">%</span>
+              <span className="text-primary">%</span>
             </div>
             <div className="mt-3 grid grid-cols-3 gap-4 border-t border-border pt-4 font-mono text-sm">
               <div>
                 <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
                   Total fees
                 </div>
-                <div className="mt-1 text-cash">${totalCost.toFixed(0)}</div>
+                <div className="mt-1 text-primary">${totalCost.toFixed(0)}</div>
               </div>
               <div>
                 <div className="text-[10px] uppercase tracking-widest text-muted-foreground">
@@ -127,7 +127,7 @@ export default function CalculatorPage() {
                   </div>
                   <div className="h-2 flex-1 overflow-hidden rounded-full bg-ink/60">
                     <div
-                      className="h-full bg-gradient-to-r from-cash to-destructive"
+                      className="h-full bg-gradient-to-r from-primary to-destructive"
                       style={{
                         width: `${
                           (s.balance / (principal + fee * (rollovers + 1))) *
@@ -176,7 +176,7 @@ function Slider({
         <span className="font-mono text-[11px] uppercase tracking-widest text-muted-foreground">
           {label}
         </span>
-        <span className="display text-2xl text-cash">
+        <span className="display text-2xl text-primary">
           {unit === "$" ? "$" : ""}
           {value}
           {unit !== "$" ? unit : ""}
@@ -189,7 +189,7 @@ function Slider({
         step={step}
         value={value}
         onChange={(e) => setValue(Number(e.target.value))}
-        className="mt-2 w-full accent-[var(--cash)]"
+        className="mt-2 w-full accent-[var(--primary)]"
       />
       <div className="mt-1 flex justify-between font-mono text-[10px] text-muted-foreground">
         <span>{min}</span>

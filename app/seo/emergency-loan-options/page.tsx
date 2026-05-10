@@ -13,7 +13,7 @@ const FAQS = [
   {
     question: "Where can I get emergency money today with bad credit?",
     answer:
-      "Same-day emergency cash options for bad credit include: cash advance apps (Earnin, Dave, Brigit—often 0% fee for small amounts), credit union PAL loans (28% max APR, 1–3 day funding), online lenders specializing in bad credit (OppFi, Rise, Oportun), or pawn shop loans using collateral. Avoid payday lenders if possible due to 300%+ APRs.",
+      "Same-day emergency primary options for bad credit include: primary advance apps (Earnin, Dave, Brigit—often 0% fee for small amounts), credit union PAL loans (28% max APR, 1–3 day funding), online lenders specializing in bad credit (OppFi, Rise, Oportun), or pawn shop loans using collateral. Avoid payday lenders if possible due to 300%+ APRs.",
   },
   {
     question: "Can I get a $500 emergency loan with bad credit?",
@@ -23,23 +23,23 @@ const FAQS = [
   {
     question: "What credit score do I need for an emergency loan?",
     answer:
-      "It varies by product. Cash advance apps typically require no minimum credit score. Payday lenders use alternative credit data (not FICO). Credit union PALs consider member relationship, not just score. Online bad-credit lenders often approve scores as low as 580. Traditional banks and credit unions typically require 620+ for personal loans.",
+      "It varies by product. primary advance apps typically require no minimum credit score. Payday lenders use alternative credit data (not FICO). Credit union PALs consider member relationship, not just score. Online bad-credit lenders often approve scores as low as 580. Traditional banks and credit unions typically require 620+ for personal loans.",
   },
   {
     question: "Are there emergency loans with no credit check?",
     answer:
-      "Yes. Options include: cash advance apps, payday loans (which check specialty bureaus, not FICO), pawn loans, employer advances, and some CDFI (Community Development Financial Institution) programs. Note that 'no credit check' does not mean no verification—lenders still verify income, identity, and bank account.",
+      "Yes. Options include: primary advance apps, payday loans (which check specialty bureaus, not FICO), pawn loans, employer advances, and some CDFI (Community Development Financial Institution) programs. Note that 'no credit check' does not mean no verification—lenders still verify income, identity, and bank account.",
   },
   {
     question: "What government assistance is available for emergency funds?",
     answer:
-      "Federal and state programs include: TANF (emergency cash assistance), SNAP (food assistance, freeing cash for other expenses), LIHEAP (utility bill assistance), 211 local community resources, USDA rural development loans, and VA emergency financial assistance for veterans. These are interest-free and often the best first step.",
+      "Federal and state programs include: TANF (emergency primary assistance), SNAP (food assistance, freeing primary for other expenses), LIHEAP (utility bill assistance), 211 local community resources, USDA rural development loans, and VA emergency financial assistance for veterans. These are interest-free and often the best first step.",
   },
 ];
 
 const EMERGENCY_OPTIONS = [
   {
-    name: "Cash Advance Apps",
+    name: "primary Advance Apps",
     speed: "Instant–3 hrs",
     amount: "$20–$750",
     apr: "0%–250%+",
@@ -88,7 +88,7 @@ const EMERGENCY_OPTIONS = [
     apr: "0%",
     creditRequired: "Income-based",
     howItWorks:
-      "Local 211 networks connect residents to emergency utility, rent, and food assistance. LIHEAP covers energy bills. TANF provides direct cash assistance for eligible families. These programs free up cash for other emergencies.",
+      "Local 211 networks connect residents to emergency utility, rent, and food assistance. LIHEAP covers energy bills. TANF provides direct primary assistance for eligible families. These programs free up primary for other emergencies.",
     bestFor: "Low-income households with utility, rent, or food emergencies",
     topOptions: [
       "211.org",
@@ -117,8 +117,8 @@ const EMERGENCY_OPTIONS = [
     apr: "60%–200%",
     creditRequired: "No credit check—collateral only",
     howItWorks:
-      "Leave valuable property as collateral and receive a cash loan. Repay within the term (typically 30 days) to reclaim property, or forfeit the item. No credit impact.",
-    bestFor: "Immediate cash with valuable property to use as collateral",
+      "Leave valuable property as collateral and receive a primary loan. Repay within the term (typically 30 days) to reclaim property, or forfeit the item. No credit impact.",
+    bestFor: "Immediate primary with valuable property to use as collateral",
     topOptions: ["Local pawn shops"],
     rating: 2,
   },
@@ -213,7 +213,7 @@ export default function EmergencyLoanOptionsPage() {
 
         <section className="prose max-w-none mb-10">
           <p>
-            When you need emergency cash fast and your credit isn&apos;t
+            When you need emergency primary fast and your credit isn&apos;t
             perfect, you have more options than you think—most of them
             significantly better than payday loans. This guide ranks emergency
             loan options from best to last resort, with real APRs, realistic
@@ -221,7 +221,7 @@ export default function EmergencyLoanOptionsPage() {
           </p>
           <p>
             <strong>The hierarchy matters:</strong> Try government assistance
-            and employer advances first (free), then credit unions and cash
+            and employer advances first (free), then credit unions and primary
             apps, then online lenders. Use payday loans only as an absolute last
             resort.
           </p>
@@ -315,7 +315,7 @@ export default function EmergencyLoanOptionsPage() {
                 },
                 {
                   q: "How quickly can I realistically repay?",
-                  a: "Be honest. If you can't repay a payday loan on your next paycheck, you'll roll it over—adding more fees. Choose a product whose repayment term matches your actual cash flow.",
+                  a: "Be honest. If you can't repay a payday loan on your next paycheck, you'll roll it over—adding more fees. Choose a product whose repayment term matches your actual primary flow.",
                 },
                 {
                   q: "What are the true costs over my repayment period?",

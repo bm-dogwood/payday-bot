@@ -29,7 +29,7 @@ const FAQS = [
   {
     question: "What is a good APR for an emergency loan?",
     answer:
-      "Credit union Payday Alternative Loans (PALs) are capped at 28% APR—an excellent rate for an emergency loan. Online personal loans typically range 6%–36% APR. Credit card cash advances run 20%–30% APR. Any rate under 36% APR is generally considered consumer-safe by policymakers.",
+      "Credit union Payday Alternative Loans (PALs) are capped at 28% APR—an excellent rate for an emergency loan. Online personal loans typically range 6%–36% APR. Credit card primary advances run 20%–30% APR. Any rate under 36% APR is generally considered consumer-safe by policymakers.",
   },
   {
     question: "Do payday lenders have to disclose APR?",
@@ -43,7 +43,7 @@ const APR_COMPARISONS = [
   { product: "Payday loan (no cap state)", apr: "391%–664%+", type: "danger" },
   { product: "Auto title loan", apr: "300%–400%", type: "danger" },
   { product: "Rent-to-own furniture", apr: "100%–300%", type: "warning" },
-  { product: "Credit card cash advance", apr: "20%–30%", type: "ok" },
+  { product: "Credit card primary advance", apr: "20%–30%", type: "ok" },
   { product: "Credit card purchases", apr: "15%–25%", type: "ok" },
   { product: "Online personal loan (bad credit)", apr: "18%–36%", type: "ok" },
   {
@@ -239,8 +239,8 @@ export default function PaydayLoanAprCalculatorPage() {
           </p>
           <p className="text-gray-300 leading-relaxed mb-4">
             The APR reveals that payday lending is more expensive than credit
-            card cash advances by 13x–26x, more expensive than personal loans by
-            11x–65x, and more expensive than credit union PALs by 14x.
+            card primary advances by 13x–26x, more expensive than personal loans
+            by 11x–65x, and more expensive than credit union PALs by 14x.
           </p>
           <p className="text-gray-300 leading-relaxed">
             Federal law (Truth in Lending Act) requires lenders to disclose APR

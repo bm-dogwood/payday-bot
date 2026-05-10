@@ -84,7 +84,7 @@ const RESOURCES = [
 export default function ResourcesPage() {
   return (
     <div className="mx-auto max-w-7xl px-5 py-16">
-      <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-cash">
+      <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-primary">
         // 06 — Survival Kit
       </p>
       <h1 className="display mt-3 text-5xl sm:text-7xl">
@@ -106,7 +106,7 @@ export default function ResourcesPage() {
             >
               <div className="flex items-center justify-between">
                 <h3 className="font-display text-lg">{r.law}</h3>
-                <span className="rounded-full border border-cash/40 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-cash">
+                <span className="rounded-full border border-primary/40 px-2 py-0.5 font-mono text-[10px] uppercase tracking-wider text-primary">
                   {r.who}
                 </span>
               </div>
@@ -129,7 +129,7 @@ export default function ResourcesPage() {
               className="receipt-edge rounded-xl bg-ink/70 p-1"
             >
               <div className="rounded-md bg-card p-5">
-                <h3 className="display text-xl text-cash">{s.title}</h3>
+                <h3 className="display text-xl text-primary">{s.title}</h3>
                 <pre className="mt-3 whitespace-pre-wrap font-mono text-xs leading-relaxed text-foreground/90">
                   {s.body}
                 </pre>
@@ -155,12 +155,12 @@ export default function ResourcesPage() {
               className="lift group flex items-center justify-between gap-4 rounded-xl border border-border bg-card/40 p-5"
             >
               <div>
-                <div className="font-display text-lg group-hover:text-cash">
+                <div className="font-display text-lg group-hover:text-primary">
                   {r.name}
                 </div>
                 <div className="text-sm text-muted-foreground">{r.desc}</div>
               </div>
-              <span className="text-cash transition group-hover:translate-x-1">
+              <span className="text-primary transition group-hover:translate-x-1">
                 ↗
               </span>
             </a>
